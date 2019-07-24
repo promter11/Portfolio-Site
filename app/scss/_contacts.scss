@@ -1,0 +1,137 @@
+.contacts-section {
+    position: relative;
+
+    padding: 60px 0;
+
+    background-color: $contacts-section-color;
+
+    &-triangle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 30px;
+        height: 30px;
+
+        border: 15px solid transparent;
+        border-top: 15px solid $portfolio-section-color;
+    }
+
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-info {
+            max-width: 50%;
+
+            &__title {
+                margin-bottom: 30px;
+            }
+
+            &__line {
+                margin-bottom: 40px;
+            }
+
+            &__description {
+                max-width: 460px;
+
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 1.6;
+                text-align: justify;
+
+                margin-bottom: 60px;
+            }
+
+            &-block {
+
+                &-address,
+                &-phone,
+                &-mail {
+                    display: block;
+
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 2.25;
+
+                    color: $title-color-2;
+
+                    &__text {
+                        margin-left: 10px;
+
+                        color: $description-color;
+                    }
+                }
+            }
+        }
+
+        &-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            max-width: 50%;
+
+            &__name,
+            &__mail {
+                width: 48%;
+            }
+
+            &__theme,
+            &__message {
+                width: 100%;
+            }
+
+            &__message {
+                height: 140px;
+
+                resize: none;
+            }
+
+            &__name,
+            &__mail,
+            &__theme,
+            &__message {
+                font-family: 'Montserrat';
+                font-size: 14px;
+                font-weight: 300;
+
+                margin-bottom: 30px;
+                padding: 15px 30px;
+
+                border: none;
+                outline: none;
+            }
+
+            &__btn {
+                width: 170px;
+                height: 50px;
+
+                margin: 0 auto;
+
+                font-family: 'Montserrat';
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                border: none;
+
+                cursor: pointer;
+
+                transition: box-shadow .25s ease-in-out;
+
+                background-color: $brand-color;
+                color: #fff;
+
+                &:hover {
+                    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+                }
+            }
+        }
+    }
+}

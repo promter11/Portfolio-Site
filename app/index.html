@@ -1,19 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Start Template</title>
+    <title>Портфолио веб-разработчика</title>
 
-    <script src="libs/js/libs.min.js"></script>
-
-    <link rel="stylesheet" href="libs/css/libs.min.css">
+    <link rel="icon" href="img/molecula.png">
 
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <header class="header-section" id="home">
+        <div class="container">
+            <nav class="header-section-nav">
+                <div class="header-section-nav-list">
+                    <li class="header-section-nav-list__item"><a href="#home" class="header-section-nav-list__link">Домой</a></li>
+                    <li class="header-section-nav-list__item"><a href="#about" class="header-section-nav-list__link">Обо мне</a></li>
+                    <li class="header-section-nav-list__item"><a href="#skills" class="header-section-nav-list__link">Навыки</a></li>
+                    <li class="header-section-nav-list__item"><a href="#portfolio" class="header-section-nav-list__link">Портфолио</a></li>
+                    <li class="header-section-nav-list__item"><a href="#contacts" class="header-section-nav-list__link">Контакты</a></li>
+                </div>
+            </nav>
+            <div class="header-section-content">
+                <h1 class="header-section-content__name">Александр Самылин</h1>
+                <p class="header-section-content__position">Начинающий веб-разработчик</p>
+                <div class="header-section-content-button">
+                    <a class="header-section-content-button__link" href="#about">
+                        <svg class="header-section-content-button__icon" version="1.1" id="arrow-down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve">
+                            <g>
+                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751 c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0 c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="about-section" id="about">
+        <div class="about-section-content">
+            <h2 class="about-section-content__title">Обо мне</h2>
+            <div class="about-section-content__line line"></div>
+            <p class="about-section-content__description">Здравствуйте, меня зовут Александр Самылин, мне 21 год. На 4 курсе университета я увлекся версткой сайтов с использованием HTML и CSS. В настоящее время я активно развиваюсь в области веб-разработки, познаю новые технологии и улучшаю уже накопленные знания. В бущуем планирую стать полноценным Front-End разработчиком.</p>
+            <div class="about-section-content-button">
+                <a class="about-section-cotent-button__link" href="#">
+                    <svg class="about-section-content-button__icon" version="1.1" id="download" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="475.078px" height="475.077px" viewBox="0 0 475.078 475.077" style="enable-background:new 0 0 475.078 475.077;" xml:space="preserve">
+                        <g>
+                            <g>
+                                <path d="M467.083,318.627c-5.324-5.328-11.8-7.994-19.41-7.994H315.195l-38.828,38.827c-11.04,10.657-23.982,15.988-38.828,15.988 c-14.843,0-27.789-5.324-38.828-15.988l-38.543-38.827H27.408c-7.612,0-14.083,2.669-19.414,7.994 C2.664,323.955,0,330.427,0,338.044v91.358c0,7.614,2.664,14.085,7.994,19.414c5.33,5.328,11.801,7.99,19.414,7.99h420.266 c7.61,0,14.086-2.662,19.41-7.99c5.332-5.329,7.994-11.8,7.994-19.414v-91.358C475.078,330.427,472.416,323.955,467.083,318.627z M360.025,414.841c-3.621,3.617-7.905,5.424-12.854,5.424s-9.227-1.807-12.847-5.424c-3.614-3.617-5.421-7.898-5.421-12.844 c0-4.948,1.807-9.236,5.421-12.847c3.62-3.62,7.898-5.431,12.847-5.431s9.232,1.811,12.854,5.431 c3.613,3.61,5.421,7.898,5.421,12.847C365.446,406.942,363.638,411.224,360.025,414.841z M433.109,414.841 c-3.614,3.617-7.898,5.424-12.848,5.424c-4.948,0-9.229-1.807-12.847-5.424c-3.613-3.617-5.42-7.898-5.42-12.844 c0-4.948,1.807-9.236,5.42-12.847c3.617-3.62,7.898-5.431,12.847-5.431c4.949,0,9.233,1.811,12.848,5.431 c3.617,3.61,5.427,7.898,5.427,12.847C438.536,406.942,436.729,411.224,433.109,414.841z" fill="#4d4d4d"/>
+                                <path d="M224.692,323.479c3.428,3.613,7.71,5.421,12.847,5.421c5.141,0,9.418-1.808,12.847-5.421l127.907-127.908 c5.899-5.519,7.234-12.182,3.997-19.986c-3.23-7.421-8.847-11.132-16.844-11.136h-73.091V36.543c0-4.948-1.811-9.231-5.421-12.847 c-3.62-3.617-7.901-5.426-12.847-5.426h-73.096c-4.946,0-9.229,1.809-12.847,5.426c-3.615,3.616-5.424,7.898-5.424,12.847V164.45 h-73.089c-7.998,0-13.61,3.715-16.846,11.136c-3.234,7.801-1.903,14.467,3.999,19.986L224.692,323.479z" fill="#4d4d4d"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="about-section-content-button__text">Скачать резюме</span>
+                </a>
+            </div>
+        </div>
+        <div class="about-section-img">
+            <img class="about-section-img__image" src="img/man-img.png" alt="Man">
+        </div>
+    </section>
+    <section class="skills-section" id="skills">
+        <div class="skills-section-img">
+            <img class="skills-section-img__image" src="img/grid-img.png" alt="Grid">
+        </div>
+        <div class="skills-section-content">
+            <h2 class="skills-section-content__title">Профессиональные навыки</h2>
+            <div class="skills-section-content__line line"></div>
+            <div class="skills-section-content-block">
+                <div class="skills-section-content-block-skill">
+                    <h4 class="skills-section-content-block-skill__title">HTML5 <span class="skills-section-content-block-skill__percent">0%</span></h4>
+                    <div class="skills-section-content-block-skill-progress-back">
+                        <div class="skills-section-content-block-skill-progress-front"></div>
+                    </div>
+                </div>
+                <div class="skills-section-content-block-skill">
+                    <h4 class="skills-section-content-block-skill__title">CSS3 (SCSS) <span class="skills-section-content-block-skill__percent">0%</span></h4>
+                    <div class="skills-section-content-block-skill-progress-back">
+                        <div class="skills-section-content-block-skill-progress-front"></div>
+                    </div>
+                </div>
+                <div class="skills-section-content-block-skill">
+                    <h4 class="skills-section-content-block-skill__title">Javascript (ES6) <span class="skills-section-content-block-skill__percent">0%</span></h4>
+                    <div class="skills-section-content-block-skill-progress-back">
+                        <div class="skills-section-content-block-skill-progress-front"></div>
+                    </div>
+                </div>
+                <div class="skills-section-content-block-skill">
+                    <h4 class="skills-section-content-block-skill__title">jQuery <span class="skills-section-content-block-skill__percent">0%</span></h4>
+                    <div class="skills-section-content-block-skill-progress-back">
+                        <div class="skills-section-content-block-skill-progress-front"></div>
+                    </div>
+                </div>
+                <div class="skills-section-content-block-skill">
+                    <h4 class="skills-section-content-block-skill__title">Bootstrap 4 <span class="skills-section-content-block-skill__percent">0%</span></h4>
+                    <div class="skills-section-content-block-skill-progress-back">
+                        <div class="skills-section-content-block-skill-progress-front"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="portfolio-section-header">
+                <h2 class="portfolio-section-header__title">Портфолио</h2>
+                <div class="portfolio-section-header__line line"></div>
+                <p class="portfolio-section-header__description">Здесь вы можете ознакомиться с некоторыми работами, сделанными мной.</p>
+            </div>
+            <div class="portfolio-section-content">
+                <div class="portfolio-section-content-block">
+                    <img class="portfolio-section-content-block__image" src="img/creativia-preview.png" alt="Creativia">
+                    <div class="portfolio-section-content-block-icon">
+                        <a class="portfolio-section-content-block-icon__link" href="#">
+                            <svg class="portfolio-section-content-block-icon__icon" version="1.1" id="magnifier" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
+                                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-section-content-block">
+                    <img class="portfolio-section-content-block__image" src="img/bicycle-preview.png" alt="Bicycle">
+                    <div class="portfolio-section-content-block-icon">
+                        <a class="portfolio-section-content-block-icon__link" href="#">
+                            <svg class="portfolio-section-content-block-icon__icon" version="1.1" id="magnifier" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
+                                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="portfolio-section-content-block">
+                    <img class="portfolio-section-content-block__image" src="img/waxom-preview.png" alt="Waxom">
+                    <div class="portfolio-section-content-block-icon">
+                        <a class="portfolio-section-content-block-icon__link" href="#">
+                            <svg class="portfolio-section-content-block-icon__icon" version="1.1" id="magnifier" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
+                                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92 c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17 s-17-7.626-17-17S14.61,6,23.984,6z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contacts-section" id="contacts">
+        <div class="container">
+            <div class="contacts-section-triangle"></div>
+            <div class="contacts-section-content">
+                <div class="contacts-section-content-info">
+                    <h2 class="contacts-section-content-info__title">Обратная связь</h2>
+                    <div class="contacts-section-content-info__line line"></div>
+                    <p class="contacts-section-content-info__description">Если у вас есть какие-либо вопросы, то вы можете связаться со мной при помощи реквизитов, указанных внизу, либо отправив свое сообщение, заполнив поля формы. Я отвечу вам в ближайшее время.</p>
+                    <div class="contacts-section-content-info-block">
+                        <span class="contacts-section-content-info-block-address">Адрес: <a class="contacts-section-content-info-block-address__text" href="#">г. Волгоград, Советский р-н</a></span>
+                        <span class="contacts-section-content-info-block-phone">Телефон: <a class="contacts-section-content-info-block-phone__text" href="tel:+79370980594">+7 (937) 098-05-94</a></span>
+                        <span class="contacts-section-content-info-block-mail">E-Mail: <a class="contacts-section-content-info-block-mail__text" href="mailto:promter11@gmail.com">promter11@gmail.com</a></span>
+                    </div>
+                </div>
+                <form class="contacts-section-content-form" action="https://formspree.io/promter11@gmail.com" method="POST">
+                    <input class="contacts-section-content-form__name" type="text" name="user-name" placeholder="Ваше имя" required>
+                    <input class="contacts-section-content-form__mail" type="email" name="user-mail" placeholder="Ваш E-Mail" required>
+                    <input class="contacts-section-content-form__theme" type="text" name="user-theme" placeholder="Тема" required>
+                    <textarea class="contacts-section-content-form__message" name="user-message" id="message" placeholder="Ваше сообщение" required></textarea>
+                    <input class="contacts-section-content-form__btn" type="submit" value="Отправить">
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section" id="footer">
+        <div class="container">
+            <div class="footer-section-content">
+                <div class="footer-section-content-social">
+                    <div class="footer-section-content-social-vk">
+                        <a class="footer-section-content-social-vk__link" href="https://vk.com" target="_blank">
+                            <svg class="footer-section-content-social-vk__icon" version="1.1" id="vk-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="548.358px" height="548.358px" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 548.358 548.358;" xml:space="preserve">
+                                <g>
+                                    <path d="M545.451,400.298c-0.664-1.431-1.283-2.618-1.858-3.569c-9.514-17.135-27.695-38.167-54.532-63.102l-0.567-0.571 l-0.284-0.28l-0.287-0.287h-0.288c-12.18-11.611-19.893-19.418-23.123-23.415c-5.91-7.614-7.234-15.321-4.004-23.13 c2.282-5.9,10.854-18.36,25.696-37.397c7.807-10.089,13.99-18.175,18.556-24.267c32.931-43.78,47.208-71.756,42.828-83.939 l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712c-4.764-1.427-10.853-1.663-18.278-0.712l-82.224,0.568 c-1.332-0.472-3.234-0.428-5.712,0.144c-2.475,0.572-3.713,0.859-3.713,0.859l-1.431,0.715l-1.136,0.859 c-0.952,0.568-1.999,1.567-3.142,2.995c-1.137,1.423-2.088,3.093-2.848,4.996c-8.952,23.031-19.13,44.444-30.553,64.238 c-7.043,11.803-13.511,22.032-19.418,30.693c-5.899,8.658-10.848,15.037-14.842,19.126c-4,4.093-7.61,7.372-10.852,9.849 c-3.237,2.478-5.708,3.525-7.419,3.142c-1.715-0.383-3.33-0.763-4.859-1.143c-2.663-1.714-4.805-4.045-6.42-6.995 c-1.622-2.95-2.714-6.663-3.285-11.136c-0.568-4.476-0.904-8.326-1-11.563c-0.089-3.233-0.048-7.806,0.145-13.706 c0.198-5.903,0.287-9.897,0.287-11.991c0-7.234,0.141-15.085,0.424-23.555c0.288-8.47,0.521-15.181,0.716-20.125 c0.194-4.949,0.284-10.185,0.284-15.705s-0.336-9.849-1-12.991c-0.656-3.138-1.663-6.184-2.99-9.137 c-1.335-2.95-3.289-5.232-5.853-6.852c-2.569-1.618-5.763-2.902-9.564-3.856c-10.089-2.283-22.936-3.518-38.547-3.71 c-35.401-0.38-58.148,1.906-68.236,6.855c-3.997,2.091-7.614,4.948-10.848,8.562c-3.427,4.189-3.905,6.475-1.431,6.851 c11.422,1.711,19.508,5.804,24.267,12.275l1.715,3.429c1.334,2.474,2.666,6.854,3.999,13.134c1.331,6.28,2.19,13.227,2.568,20.837 c0.95,13.897,0.95,25.793,0,35.689c-0.953,9.9-1.853,17.607-2.712,23.127c-0.859,5.52-2.143,9.993-3.855,13.418 c-1.715,3.426-2.856,5.52-3.428,6.28c-0.571,0.76-1.047,1.239-1.425,1.427c-2.474,0.948-5.047,1.431-7.71,1.431 c-2.667,0-5.901-1.334-9.707-4c-3.805-2.666-7.754-6.328-11.847-10.992c-4.093-4.665-8.709-11.184-13.85-19.558 c-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267 c-4.952-10.185-9.329-20.037-13.134-29.554c-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-0.859c-0.95-0.76-2.475-1.567-4.567-2.427 c-2.095-0.859-4.281-1.475-6.567-1.854l-78.229,0.568c-7.994,0-13.418,1.811-16.274,5.428l-1.143,1.711 C0.288,140.146,0,141.668,0,143.763c0,2.094,0.571,4.664,1.714,7.707c11.42,26.84,23.839,52.725,37.257,77.659 c13.418,24.934,25.078,45.019,34.973,60.237c9.897,15.229,19.985,29.602,30.264,43.112c10.279,13.515,17.083,22.176,20.412,25.981 c3.333,3.812,5.951,6.662,7.854,8.565l7.139,6.851c4.568,4.569,11.276,10.041,20.127,16.416 c8.853,6.379,18.654,12.659,29.408,18.85c10.756,6.181,23.269,11.225,37.546,15.126c14.275,3.905,28.169,5.472,41.684,4.716h32.834 c6.659-0.575,11.704-2.669,15.133-6.283l1.136-1.431c0.764-1.136,1.479-2.901,2.139-5.276c0.668-2.379,1-5,1-7.851 c-0.195-8.183,0.428-15.558,1.852-22.124c1.423-6.564,3.045-11.513,4.859-14.846c1.813-3.33,3.859-6.14,6.136-8.418 c2.282-2.283,3.908-3.666,4.862-4.142c0.948-0.479,1.705-0.804,2.276-0.999c4.568-1.522,9.944-0.048,16.136,4.429 c6.187,4.473,11.99,9.996,17.418,16.56c5.425,6.57,11.943,13.941,19.555,22.124c7.617,8.186,14.277,14.271,19.985,18.274 l5.708,3.426c3.812,2.286,8.761,4.38,14.853,6.283c6.081,1.902,11.409,2.378,15.984,1.427l73.087-1.14 c7.229,0,12.854-1.197,16.844-3.572c3.998-2.379,6.373-5,7.139-7.851c0.764-2.854,0.805-6.092,0.145-9.712 C546.782,404.25,546.115,401.725,545.451,400.298z" fill="white"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-section-content-social-github">
+                        <a class="footer-section-content-social-github__link" href="https://github.com" target="_blank">
+                            <svg class="footer-section-content-social-github__icon" version="1.1" id="github-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="430.117px" height="430.116px" viewBox="0 0 430.117 430.116" style="enable-background:new 0 0 430.117 430.116;" xml:space="preserve">
+                                <g>
+                                    <path id="Github" d="M332.146,1.3c-38.456,24.038-78.108,3.762-106.689,0C99.268-15.326,59.152,131.895,151.094,190.921 c-23.671,12.258-22.124,74.668,3.239,83.559c-59.739,6.833-70.816,91.027-38.793,125.349c38.965,41.752,158.828,38.989,193.976,0 c24.539-27.237,27.946-83.372,6.454-109.266c-19.593-23.63-117.904-27.2-116.374-64.284c1.064-25.921,36.613-21.835,58.194-32.143 c40.589-19.408,64.434-77.478,48.491-122.135c9.049-1.701,16.797-4.721,25.864-6.422V1.3z M176.966,136.295 c-47.308-103.065,108.771-95.673,61.428,0C222.862,147.802,192.302,148.946,176.966,136.295z M264.25,338.766 c4.191,46.223-89.396,48.271-100.219,16.087c-9.11-27.116,2.231-34.803,29.09-41.789 C223.543,305.144,261.44,307.851,264.25,338.766z" fill="white"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-section-content-social-post">
+                        <a class="footer-section-content-social-post__link" href="mailto:promter11@gmail.com">
+                            <svg class="footer-section-content-social-post__icon" version="1.1" id="post-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 14 14" style="enable-background:new 0 0 14 14;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <path d="M7,9L5.268,7.484l-4.952,4.245C0.496,11.896,0.739,12,1.007,12h11.986 c0.267,0,0.509-0.104,0.688-0.271L8.732,7.484L7,9z" fill="white"/>
+                                        <path d="M13.684,2.271C13.504,2.103,13.262,2,12.993,2H1.007C0.74,2,0.498,2.104,0.318,2.273L7,8 L13.684,2.271z" fill="white"/>
+                                        <polygon points="0,2.878 0,11.186 4.833,7.079" fill="white"/>
+                                        <polygon points="9.167,7.079 14,11.186 14,2.875" fill="white"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section-content-rights">Copyright &copy; 2019, Портфолио веб-разработчика. Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+
     <script src="js/scripts.js"></script>
 </body>
 </html>

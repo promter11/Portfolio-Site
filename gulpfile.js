@@ -30,20 +30,6 @@ gulp.task('sass', () => {
         .pipe(browserSync.stream({stream: true}));
 });
 
-gulp.task('styles', () => {
-    return gulp.src('app/libs/css/**/*.css')
-        .pipe(concat('libs.min.css'))
-        .pipe(cleanCSS())
-        .pipe(gulp.dest('app/libs/css'));
-});
-
-gulp.task('scripts', () => {
-    return gulp.src('app/libs/js/**/*.js')
-        .pipe(concat('libs.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('app/libs/js'));
-});
-
 gulp.task('img', () => {
     return gulp.src('app/img/**/*')
         .pipe(cache(imagemin({
@@ -91,9 +77,6 @@ gulp.task('build-dist', (done) => {
     const buildJs = gulp.src('app/js/*.js')
         .pipe(gulp.dest('dist/js'));
     
-    const buildLibs = gulp.src('app/libs/**/*')
-        .pipe(gulp.dest('dist/libs'));
-    
     const buildImg = gulp.src('app/img/**/*')
         .pipe(gulp.dest('dist/img'));
     
@@ -109,4 +92,4 @@ gulp.task('watch', gulp.parallel('browser-sync', 'sass', () => {
     gulp.watch('app/*.html').on('change', browserSync.reload);
 }));
 
-gulp.task('build', gulp.series('clear-dist', 'img', 'styles', 'scripts', 'build-dist', 'minify-html', 'minify-css', 'minify-js'));
+gulp.task('build', gulp.series('clear-dist', 'img', 'build-dist', 'minify-html', 'minify-css', 'minify-js'));

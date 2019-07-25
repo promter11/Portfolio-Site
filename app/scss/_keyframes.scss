@@ -1,4 +1,26 @@
-@keyframes button-animation {
+@keyframes header-name-animation {
+    0% {
+        margin-bottom: -40px;
+
+        color: transparent;
+    }
+
+    50% {
+        margin-bottom: -40px;
+    }
+}
+
+@keyframes header-position-animation {
+    0% {
+        color: transparent;
+    }
+    
+    50% {
+        color: transparent;
+    }
+}
+
+@keyframes button-move-animation {
     50% {
         transform: translateY(-20px);
     }

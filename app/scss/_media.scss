@@ -1,19 +1,230 @@
 @media only screen and (min-width: 320px) {
+    .header-section {
 
-}
+        &-nav {
 
-@media only screen and (min-width: 576px) {
-    
+            &-list {
+                display: none;
+            }
+
+            &-menu {
+                display: block;
+            }
+        }
+    }
+
+    .about-section {
+        flex-direction: column;
+
+        &-content {
+            max-width: 100%;
+
+            padding: 50px;
+
+            &__title {
+                font-size: 24px;
+            }
+
+            &__description {
+                font-size: 14px;
+            }
+        }
+
+        &-img {
+            max-width: 100%;
+        }
+    }
+
+    .skills-section {
+        flex-direction: column;
+
+        &-img {
+            max-width: 100%;
+        }
+
+        &-content {
+            width: 100%;
+
+            &__title {
+                text-align: center;
+            }
+
+            &__line {
+                margin: 0 auto 30px auto;
+            }
+        }
+    }
+
+    .portfolio-section {
+
+        &-content {
+
+            &-block {
+                margin: 24px 8px;
+            }
+        }
+    }
+
+    .contacts-section {
+
+        &-content {
+            flex-direction: column;
+
+            &-info {
+                max-width: 100%;
+
+                margin: 0 0 40px 0;
+
+                &__title {
+                    text-align: center;
+                }
+
+                &__line {
+                    margin: 0 auto 40px auto;
+                }
+
+                &-block {
+
+                    &-address,
+                    &-phone,
+                    &-mail {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            &-form {
+                width: 100%;
+
+                max-width: 470px;
+
+                &__name,
+                &__mail {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) {
+    .header-section {
 
+        &-nav {
+
+            &-list {
+                display: flex;
+            }
+
+            &-menu {
+                display: none;
+            }
+        }
+    }
+
+    .about-section {
+        flex-direction: row;
+
+        &-content {
+            max-width: 50%;
+        }
+
+        &-img {
+            max-width: 50%;
+        }
+    }
+
+    .skills-section {
+        flex-direction: row;
+
+        &-img {
+            max-width: 50%;
+        }
+
+        &-content {
+            width: 50%;
+
+            &__title {
+                text-align: left;
+            }
+
+            &__line {
+                margin: 0 0 30px 0;
+            }
+        }
+    }
+
+    .portfolio-section {
+
+        &-content {
+
+            &-block {
+                margin: 8px;
+            }
+        }
+    }
+
+    .contacts-section {
+
+        &-content {
+            flex-direction: row;
+
+            &-info {
+                max-width: 50%;
+
+                margin: 0 20px 0 0;
+
+                &__title {
+                    text-align: left;
+                }
+
+                &__line {
+                    margin: 0 0 30px 0;
+                }
+
+                &-block {
+
+                    &-address,
+                    &-phone,
+                    &-mail {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            &-form {
+                max-width: 50%;
+
+                &__name,
+                &__mail {
+                    width: 48%;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 992px) {
+    .about-section {
 
+        &-content {
+
+            &__title {
+                font-size: 30px;
+            }
+
+            &__description {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1200px) {
+    .about-section {
 
+        &-content {
+            padding: 75px 100px 50px 100px;
+        }
+    }
 }

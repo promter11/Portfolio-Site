@@ -2,15 +2,18 @@
     background: url(../img/header-bg.png) no-repeat top center / cover;
 
     &-nav {
-        padding: 20px 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        padding: 40px 0;
 
         &-list {
             display: flex;
-            justify-content: flex-end;
             align-items: center;
 
             &__item {
-                margin: 0 15px;
+                margin: 0 10px;
             }
 
             &__link {
@@ -19,7 +22,9 @@
                 line-height: 4.1;
                 text-transform: uppercase;
 
-                padding: 8px;
+                padding: 10px;
+
+                border-radius: 4px;
 
                 transition: all .5s ease-in-out;
 
@@ -31,12 +36,57 @@
                 }
             }
         }
+
+        &-menu {
+            cursor: pointer;
+
+            &__line {
+                display: block;
+
+                width: 20px;
+                height: 3px;
+
+                margin: 3px 0;
+
+                transition: all .25s;
+
+                background-color: $title-color;
+            }
+
+            &:hover {
+
+                .header-section-nav-menu__line {
+
+                    &:first-child {
+                        transform: rotate(45deg) translateY(8px);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:last-child {
+                        transform: rotate(-45deg) translateY(-8px);
+                    }
+                }
+            }
+        }
+
+        .active {
+            display: block;
+        }
     }
 
     &-content {
-        padding: 240px 0 40px 0;
+        padding: 80px 0 40px 0;
 
         &__name {
+            line-height: 1.2;
+            
+            margin-bottom: 20px;
+
+            animation: header-name-animation 2s;
+
             color: $title-color;
         }
 
@@ -44,9 +94,16 @@
             font-size: 18px;
             font-weight: 300;
 
-            margin-bottom: 280px;
+            margin-bottom: 400px;
+
+            animation: header-position-animation 2s;
 
             color: $header-description-color;
+        }
+
+        &__name,
+        &__position {
+            text-align: center;
         }
 
         &-button {
@@ -62,10 +119,16 @@
             border-radius: 50%;
 
             cursor: pointer;
+
+            transition: box-shadow .5s ease-in-out;
+
+            animation: button-move-animation 3s linear infinite;
     
             background-color: #fff;
 
-            animation: button-animation 3s linear infinite;
+            &:hover {
+                box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.75);
+            }
 
             &__link {
                 display: flex;

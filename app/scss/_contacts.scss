@@ -25,7 +25,6 @@
         align-items: center;
 
         &-info {
-            max-width: 50%;
 
             &__title {
                 margin-bottom: 30px;
@@ -73,13 +72,6 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-
-            max-width: 50%;
-
-            &__name,
-            &__mail {
-                width: 48%;
-            }
 
             &__theme,
             &__message {

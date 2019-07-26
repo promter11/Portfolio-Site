@@ -101,6 +101,10 @@ img {
 }
 
 @-webkit-keyframes button-move-animation {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
   50% {
     -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
@@ -112,6 +116,10 @@ img {
 }
 
 @keyframes button-move-animation {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
   50% {
     -webkit-transform: translateY(-20px);
     transform: translateY(-20px);
@@ -237,7 +245,7 @@ img {
 .header-section-content__position {
   font-size: 18px;
   font-weight: 300;
-  margin-bottom: 400px;
+  padding-bottom: 400px;
   -webkit-animation: header-position-animation 2s;
   animation: header-position-animation 2s;
   color: #8d8f8f;
@@ -260,6 +268,9 @@ img {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 40px;
   height: 40px;
   margin: 0 auto;
@@ -664,6 +675,10 @@ img {
   color: #787878;
 }
 
+.contacts-section-content-info-block-address__text:hover, .contacts-section-content-info-block-phone__text:hover, .contacts-section-content-info-block-mail__text:hover {
+  text-decoration: underline;
+}
+
 .contacts-section-content-form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -727,9 +742,9 @@ img {
 }
 
 .footer-section {
-  padding: 140px 0 60px 0;
-  background: -o-linear-gradient(273deg, #dfdfdf 0%, #dfdfdf 25%, #252525 25.25%, #252525 100%);
-  background: linear-gradient(177deg, #dfdfdf 0%, #dfdfdf 25%, #252525 25.25%, #252525 100%);
+  padding: 120px 0 60px 0;
+  background: -o-linear-gradient(271deg, #dfdfdf 0%, #dfdfdf 25%, #252525 25.6%, #252525 100%);
+  background: linear-gradient(179deg, #dfdfdf 0%, #dfdfdf 25%, #252525 25.6%, #252525 100%);
 }
 
 .footer-section-content-social {
@@ -746,7 +761,7 @@ img {
   -ms-flex-align: center;
   align-items: center;
   max-width: 100px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 40px auto;
 }
 
 .footer-section-content-social-vk__icon, .footer-section-content-social-github__icon, .footer-section-content-social-post__icon {
@@ -763,11 +778,11 @@ img {
 }
 
 .footer-section-content-social-post__icon:hover polygon {
-  fill: #bd2c00;
+  fill: #e4da4e;
 }
 
 .footer-section-content-social-post__icon:hover path {
-  fill: #bd2c00;
+  fill: #e4da4e;
 }
 
 .footer-section-content-rights {

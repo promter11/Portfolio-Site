@@ -4,11 +4,11 @@ const openButton = document.querySelector('.header-section-nav-menu');
 const closeButton = document.querySelector('.header-section-nav-btn');
 const headerList = document.querySelector('.header-section-nav-list');
 
-openButton.addEventListener('click', function() {
+openButton.addEventListener('click', () => {
     headerList.classList.toggle('active');
 });
 
-closeButton.addEventListener('click', function() {
+closeButton.addEventListener('click', () => {
     headerList.classList.remove('active');
 });
 
@@ -18,7 +18,7 @@ closeButton.addEventListener('click', function() {
 
 const scrollUpButton = document.querySelector('.btn-scroll-up');
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', () => {
     if (window.pageYOffset >= 600) {
         scrollUpButton.style.display = "block";
     } else {
@@ -32,10 +32,25 @@ window.addEventListener('scroll', function() {
 
 const preloader = document.querySelector('.preloader-section');
 
-window.addEventListener('load', function() {
-    setTimeout(function() {
+window.addEventListener('load', () => {
+    setTimeout(() => {
         preloader.style.display = 'none';
     }, 1000);
+});
+
+// ------------------------------------------------------------------------------
+
+// Прогресс бар прокрутки страницы
+
+const scrollProgressBar = document.querySelector('.scroll-section-bar');
+
+window.addEventListener('scroll', () => {
+    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    let scrollProgressBarPercent = windowScroll / windowHeight * 100;
+
+    scrollProgressBar.style.width = scrollProgressBarPercent + '%';
 });
 
 // ------------------------------------------------------------------------------
@@ -60,7 +75,7 @@ for (let i = 0; i < skillPercentElement.length; i++) {
 const portfolioItem = document.querySelectorAll('.portfolio-section-content-block-icon__link');
 
 for (let i = 0; i < portfolioItem.length; i++) {
-    portfolioItem[i].onclick = function() {
+    portfolioItem[i].onclick = () => {
         let itemAttr = portfolioItem[i].getAttribute('href');
 
         let modalBlock = document.querySelector(itemAttr);
@@ -69,7 +84,7 @@ for (let i = 0; i < portfolioItem.length; i++) {
 
         let modalCloseButton = modalBlock.querySelector('.portfolio-section-modal-btn-close');
 
-        modalCloseButton.addEventListener('click', function() {
+        modalCloseButton.addEventListener('click', () => {
             modalBlock.classList.remove('active');
         });
     };

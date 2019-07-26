@@ -4,13 +4,11 @@
     &-nav {
         display: flex;
         justify-content: flex-end;
-        align-items: center;
 
         padding: 40px 0;
 
         &-list {
-            display: flex;
-            align-items: center;
+            transition: all .5s ease-in-out;
 
             &__item {
                 margin: 0 10px;
@@ -28,12 +26,27 @@
 
                 transition: all .5s ease-in-out;
 
-                color: $title-color;
-
                 &:hover {
                     background-color: #000;
                     color: #fff;
                 }
+            }
+        }
+
+        .active {
+            right: 0;
+        }
+
+        &-btn {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+
+            cursor: pointer;
+
+            &__icon {
+                width: 20px;
+                height: 20px;
             }
         }
 
@@ -52,28 +65,6 @@
 
                 background-color: $title-color;
             }
-
-            &:hover {
-
-                .header-section-nav-menu__line {
-
-                    &:first-child {
-                        transform: rotate(45deg) translateY(8px);
-                    }
-
-                    &:nth-child(2) {
-                        opacity: 0;
-                    }
-
-                    &:last-child {
-                        transform: rotate(-45deg) translateY(-8px);
-                    }
-                }
-            }
-        }
-
-        .active {
-            display: block;
         }
     }
 
@@ -86,6 +77,7 @@
             margin-bottom: 20px;
 
             animation: header-name-animation 2s;
+            animation-delay: 1s;
 
             color: $title-color;
         }
@@ -97,6 +89,7 @@
             padding-bottom: 400px;
 
             animation: header-position-animation 2s;
+            animation-delay: 1s;
 
             color: $header-description-color;
         }
@@ -140,6 +133,38 @@
                 width: 15px;
                 height: 15px;
             }
+        }
+    }
+
+    .btn-scroll-up {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
+        z-index: 500;
+
+        transition: all .5s ease-in-out;
+
+        display: none;
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 40px;
+            height: 40px;
+    
+            border-radius: 4px;
+    
+            background-color: #fff;
+        }
+
+        &__icon {
+            width: 15px;
+            height: 15px;
         }
     }
 }

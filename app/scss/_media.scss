@@ -4,10 +4,32 @@
         &-nav {
 
             &-list {
-                display: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%;
+                height: 100vh;
+
+                position: fixed;
+                top: 0;
+                right: -100%;
+
+                z-index: 1000;
+
+                background-color: $title-color;
+
+                &__link {
+                    color: #fff;
+                }
             }
 
             &-menu {
+                display: block;
+            }
+
+            &-btn {
                 display: block;
             }
         }
@@ -114,9 +136,25 @@
 
             &-list {
                 display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                position: static;
+
+                height: 100%;
+
+                background-color: transparent;
+
+                &__link {
+                    color: $title-color;
+                }
             }
 
             &-menu {
+                display: none;
+            }
+
+            &-btn {
                 display: none;
             }
         }

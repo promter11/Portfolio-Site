@@ -20,9 +20,9 @@ const scrollUpButton = document.querySelector('.btn-scroll-up');
 
 window.addEventListener('scroll', () => {
     if (window.pageYOffset >= 600) {
-        scrollUpButton.style.display = "block";
+        scrollUpButton.style.opacity = 1;
     } else {
-        scrollUpButton.style.display = "none";
+        scrollUpButton.style.opacity = 0;
     }
 });
 
@@ -34,8 +34,12 @@ const preloader = document.querySelector('.preloader-section');
 
 window.addEventListener('load', () => {
     setTimeout(() => {
-        preloader.style.display = 'none';
+        preloader.style.opacity = 0;
     }, 1000);
+
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 2000);
 });
 
 // ------------------------------------------------------------------------------
@@ -55,17 +59,46 @@ window.addEventListener('scroll', () => {
 
 // ------------------------------------------------------------------------------
 
+// Скролл страницы по якорям
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let element of anchors) {
+    element.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        let elementAttr = element.getAttribute('href');
+
+        document.querySelector('' + elementAttr).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+}
+
+// ------------------------------------------------------------------------------
+
 // Изменение значения навыков в прогресс баре
 
 const skillPercentElement = document.querySelectorAll('.skills-section-content-block-skill__percent');
 const progressBar = document.querySelectorAll('.skills-section-content-block-skill-progress-front');
 
-for (let i = 0; i < skillPercentElement.length; i++) {
+for (let i = 0; i < skillPercentElement.length; i++) { 
     let percentNumber = skillPercentElement[i].getAttribute('data-percent');
 
-    progressBar[i].style.width = percentNumber + '%';
+    let counter = 0;
 
-    skillPercentElement[i].innerHTML = percentNumber + ' %';
+    const timerId = setInterval(() => {
+        if (counter == percentNumber) {
+            clearInterval(timerId);
+        } else {
+            counter++;
+
+            progressBar[i].style.width = counter + '%';
+                
+            skillPercentElement[i].innerHTML = counter + ' %';
+        }
+    }, 20);
 }
 
 // ------------------------------------------------------------------------------
@@ -81,11 +114,14 @@ for (let i = 0; i < portfolioItem.length; i++) {
         let modalBlock = document.querySelector(itemAttr);
 
         modalBlock.classList.add('active');
+        document.body.style.overflow = 'hidden';
 
-        let modalCloseButton = modalBlock.querySelector('.portfolio-section-modal-btn-close');
+        let modalCloseButton = modalBlock.querySelector('.portfolio-section-modal-header-btn-close');
 
         modalCloseButton.addEventListener('click', () => {
             modalBlock.classList.remove('active');
+
+            document.body.style.overflow = 'visible';
         });
     };
 }

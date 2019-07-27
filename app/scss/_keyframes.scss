@@ -21,11 +21,7 @@
 }
 
 @keyframes header-position-animation {
-    0% {
-        color: transparent;
-    }
-
-    50% {
+    0%, 50% {
         color: transparent;
     }
 }
@@ -41,5 +37,15 @@
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes modal-animation {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
     }
 }

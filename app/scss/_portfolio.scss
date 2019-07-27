@@ -90,86 +90,139 @@
 
     &-modal {
         display: none;
-        
+
         position: fixed;
-        top: 50%;
-        left: 50%;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
 
-        transform: translate(-50%, -50%);
+        z-index: 10500;
 
-        max-width: 570px;
-        height: auto;
+        background-color: rgba(0, 0, 0, 0.75);
 
-        padding: 40px;
-
-        z-index: 150;
-
-        background-color: #f5eee0;
-
-        &-btn-close {
+        &-wrapper {
             position: absolute;
-            top: 30px;
-            right: 20px;
+            top: 50%;
+            left: 50%;
+    
+            transform: translate(-50%, -50%);
+    
+            max-width: 570px;
+    
+            z-index: 150;
 
-            cursor: pointer;
+            animation: modal-animation 1s;
+        }
 
-            width: 40px;
-            height: 40px;
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            &__icon {
-                width: 20px;
-                height: 20px;
+            width: 100%;
+
+            padding: 20px 40px;
+            margin-bottom: 20px;
+
+            box-shadow: 0px 5px 20px -10px rgba(0,0,0,0.75);
+
+            background-color: #fff;
+
+            &-btn-close {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                cursor: pointer;
+    
+                width: 40px;
+                height: 40px;
+    
+                &__icon {
+                    width: 20px;
+                    height: 20px;
+                }
             }
-        }
-
-        &__title {
-            font-size: 20px;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        &__description {
-            margin-bottom: 20px;
-        }
-
-        &-list {
-            margin: 0 0 20px 20px;
-
-            &__item {
-                list-style-type: disc;
-
-                font-family: 'Montserrat';
-                font-weight: 300;
+    
+            &__title {
+                font-size: 20px;
                 line-height: 1.2;
-                text-transform: uppercase;
+                font-weight: 500;
             }
         }
 
-        &-btn {
-            width: 120px;
-            height: 40px;
+        &-content {
+            padding: 20px 40px;
 
-            margin: 0 auto;
-
-            font-family: 'Montserrat';
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-
-            border: none;
-            outline: none;
-
-            cursor: pointer;
-
-            transition: box-shadow .25s ease-in-out;
-
-            background-color: $brand-color;
-            color: #fff;
-
-            &:hover {
-                box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+            &__description {
+                margin-bottom: 30px;
             }
+    
+            &-list {
+                margin-left: 20px;
+    
+                &__item {
+                    list-style-type: disc;
+
+                    font-weight: 600;
+                    line-height: 1.2;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &-footer {
+            padding: 20px 40px;
+
+            &-btn {
+                width: 120px;
+                height: 40px;
+    
+                margin: 0 auto;
+    
+                font-family: 'Montserrat';
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+    
+                border: none;
+                outline: none;
+    
+                cursor: pointer;
+    
+                transition: box-shadow .25s ease-in-out;
+    
+                background-color: $brand-color;
+                color: #fff;
+    
+                &:hover {
+                    box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.75);
+                }
+            }
+        }
+    }
+
+    #creativia {
+
+        .portfolio-section-modal-wrapper {
+            background-color: $modal-creativia-bg-color;
+        }
+    }
+
+    #bicycle {
+
+        .portfolio-section-modal-wrapper {
+            background-color: $modal-bicycle-bg-color;
+        }
+    }
+
+    #waxom {
+
+        .portfolio-section-modal-wrapper {
+            background-color: $modal-waxom-bg-color;
         }
     }
 
